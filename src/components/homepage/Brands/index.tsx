@@ -26,8 +26,8 @@ const brandsData: { id: string; srcUrl: string }[] = [
 
 const Brands = () => {
   return (
-    <div className="bg-black">
-      <div className="max-w-frame mx-auto flex flex-wrap items-center justify-center md:justify-between py-5 md:py-0 sm:px-4 xl:px-0 space-x-7">
+    <div className="bg-black py-6 sm:py-10">
+      <div className="max-w-frame mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 items-center justify-center px-4 xl:px-0">
         {brandsData.map((brand) => (
           <Image
             key={brand.id}
@@ -36,7 +36,7 @@ const Brands = () => {
             height={0}
             width={0}
             alt={brand.id}
-            className="h-auto w-auto max-w-[116px] lg:max-w-48 max-h-[26px] lg:max-h-9 my-5 md:my-11"
+            className="h-auto w-auto max-w-[116px] max-h-[26px] lg:max-h-9 object-contain mx-auto"
           />
         ))}
       </div>
